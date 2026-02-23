@@ -91,3 +91,7 @@ Open the `register.html` or `login.html` file using a local web server (like the
 | `POST` | `/register` | Registers a new user | `{"username": "...", "password": "..."}` |
 | `POST` | `/login` | Authenticates a user | `{"username": "...", "password": "..."}` |
 
+## 💡 Future Enhancements
+- [ ] Implement JSON Web Tokens (JWT) for persistent user sessions.
+- [ ] Add password strength validation (regex) on the frontend.
+- [ ] Create a protected dashboard route accessible only to authenticated users.
