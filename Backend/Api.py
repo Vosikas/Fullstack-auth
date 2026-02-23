@@ -3,7 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import psycopg2
 import bcrypt
-
+import os
+from dotenv import load_dotenv 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -21,11 +22,11 @@ class User(BaseModel):
 def register(user: User):
     try:
         conn = psycopg2.connect(
-            host="localhost",
-            database="demo",
-            user="postgres",
-            password="YOUR_PASSWORD_HERE", 
-            port='5432'
+            host=os.getenv("DB_HOST"),
+            database=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            port=os.getenv("DB_PORT")
         )
         cursor = conn.cursor()
         
@@ -54,11 +55,11 @@ def register(user: User):
 def login(user: User):
     try:
         conn = psycopg2.connect(
-            host="localhost",
-            database="demo",
-            user="postgres",
-            password="YOUR_PASSWORD_HERE", 
-            port='5432'
+            host=os.getenv("DB_HOST"),
+            database=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            port=os.getenv("DB_PORT")
         )
         cursor = conn.cursor()
         
