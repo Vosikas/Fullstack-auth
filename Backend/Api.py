@@ -5,6 +5,7 @@ import psycopg2
 import bcrypt
 import os
 from dotenv import load_dotenv 
+load_dotenv()
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
