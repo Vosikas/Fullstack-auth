@@ -55,8 +55,8 @@ CREATE TABLE users (
 Clone the repository and install the required Python dependencies:
 
 ```bash
-git clone [https://github.com/YourUsername/your-repo-name.git](https://github.com/YourUsername/your-repo-name.git)
-cd your-repo-name
+git clone [https://github.com/Vosikas/Fullstack-auth.git](https://github.com/Vosikas/Fullstack-auth.git)
+cd Fullstack-auth
 pip install fastapi uvicorn psycopg2 bcrypt pydantic python-dotenv
 ```
 
